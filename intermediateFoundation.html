@@ -1,0 +1,128 @@
+//Intermediate Foundation
+
+<script>
+//#1 Sigma
+
+function sigma(num){
+    var sum=0;
+    for(i=num;i>0;i--){
+        sum+=i;
+    }
+    return sum;
+}
+console.log(sigma(5));
+</script>
+<script>
+//#2 Factorial
+
+function factorial(num){
+    var sum=1;
+    for(i=num;i>0;i--){
+        sum*=i;
+    }
+    return sum;
+}
+console.log(factorial(5));
+</script>
+<script>
+//#3 Fibonacci
+
+function fib(num){
+    var arr = [];
+    var i = 0;
+    var count=0;
+    while(i<=num){
+        arr.push(i);
+        if(i==0){
+            i++;
+        }
+        else{
+            i=(i+arr[count]);
+            count++;
+        }
+    }
+    return arr;
+}
+console.log(fib(5));
+</script>
+<script>
+//#4 Array: Second-to-last
+function secondLast(arr){
+    if(arr.length<2){
+        return('null');
+    }
+    else {
+        return arr[arr.length-2];
+    }
+}
+console.log(secondLast(['one',2,-4,'liam',0]));
+console.log(secondLast(['liam']));
+</script>
+<script>
+//#5 Array: Nth-to-the-last
+function nthLast(arr,num){
+    if(num>arr.length-1){
+        return('null');
+    }
+    else {
+        return arr[arr.length-(num)];
+    }
+}
+console.log(nthLast(['one',2,-4,'liam',0],3));
+console.log(nthLast(['liam',6,-3,5],6));
+</script>
+<script>
+//#6 Array: Second-largest
+function littleBig(arr){
+    var max=arr[0];
+    var lil=0;
+    for(i=0;i<arr.length;i++){
+        if(arr.length<2){
+            return ('null');
+        }
+        else{
+            if(arr[i]>max){
+                max=arr[i];
+            }
+            else if(arr[i]!==max){
+                if(arr[i]>arr[i+1]){
+                    little=arr[i];
+                }
+
+            }
+        }
+    }
+    return little;
+}
+console.log(littleBig([42,-1,4,9,-7]));
+console.log(littleBig([1]));
+</script>
+<script>
+//Double Trouble
+function double(arr){
+    var half = arr.length;
+    var count = Math.ceil(half/2-1);
+    for(i = Math.floor(half/2);i<half;i++){
+        arr.push(arr[i]);
+        arr.push(arr[i]);
+        
+    }
+    console.log()
+    for(j=Math.ceil(arr.length/2);j>0;j--){
+        arr[j]=arr[count];
+        arr[j-1]=arr[count];
+        count--;
+        j--;
+    }
+    return arr;
+}
+console.log(double([4, 'ulysses',42,false]));
+</script>
+<script>
+//#7 Double Trouble
+function double(arr){
+    for(i=0;i<arr.length;i++){
+        arr.push(0);
+    }
+}
+</script>
